@@ -1,0 +1,21 @@
+class Solution:
+    def permuteUnique(self, nums: List[int]) -> List[List[int]]:
+        res = set()
+
+        def helper(curr: List[int], used: Set[int]) -> List[List[int]]:
+            if len(curr) == len(nums):
+                t = tuple(curr)
+                if t not in res:
+                    res.add(t)
+                return
+
+            for i, n in enumerate(nums):
+                if i not in used:
+                    curr.append(n)
+                    used.add(i)
+                    helper(curr, used)
+                    used.remove(i)
+                    curr.pop()
+
+        helper([], set())
+        return [list(i) for i in res]
