@@ -1,0 +1,18 @@
+class Solution:
+    def checkIfPrerequisite(self, numCourses: int, prerequisites: List[List[int]], queries: List[List[int]]) -> List[bool]:
+        is_prereq = [[False] * numCourses for _ in range(numCourses)]
+        for u, v in prerequisites:
+            is_prereq[u][v] = True
+        
+        for k in range(numCourses):
+            for i in range(numCourses):
+                if is_prereq[i][k]:
+                    for j in range(numCourses):
+                        is_prereq[i][j] |= is_prereq[k][j]
+
+        return [is_prereq[u][v] for u, v in queries]
+        
+        # res = []
+        # for u, v in queries:
+        #     res.append(is_prereq[u][v])
+        # return res
