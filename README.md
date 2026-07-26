@@ -1,5 +1,9 @@
 # NeetCode Solutions — @omariosc
 
+[![Source](https://img.shields.io/badge/Source-NeetCode.io-0057B8?style=flat-square)](https://neetcode.io)
+[![Sync](https://img.shields.io/badge/Sync-automatic-009639?style=flat-square)](#how-github-sync-works)
+![Language](https://img.shields.io/badge/Language-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+
 > Synced automatically from [NeetCode.io](https://neetcode.io) · Repository: `neetcode-submissions`
 
 ---
